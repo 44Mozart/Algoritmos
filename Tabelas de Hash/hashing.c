@@ -24,12 +24,13 @@ int hash(char key[], int size) {
     return (sum % size);
 }
 
+// Como sei o que cada função faz?
 
 void initHT(HT *h, int size) {
     int i;
     h->size = size;
     h->used = 0;
-    h->tbl = calloc (size, sizeof (struct pair));
+    h->tbl = calloc (size, sizeof (struct pair)); //O que é o calloc??
     
     for (i = 0; i<size; i++){
         strcpy (h->tbl[i].key, EMPTY);
